@@ -1,0 +1,9 @@
+.env
+.ipynb_checkpoints
+.DS_Store
+.hypothesis
+__pycache__
+
+models/news_reporter/bert_risk/**
+!models/bert_risk/manideepvmuela-sch-structure.png
+venv
