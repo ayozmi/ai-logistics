@@ -11,7 +11,7 @@ from datetime import datetime
 ######## CSS ########
 
 # Read the contents of the CSS file
-with open("news_app/css/styles.css", "r") as f:
+with open("app/css/styles.css", "r") as f:
     css_to_include = f.read()
 
 # Include the contents of the CSS file in the Streamlit app
@@ -41,11 +41,11 @@ def hide_text():
 
 
 # Define the path to the SQLite database
-db_path = "data/news/maritime_air_news.db"
+db_path = "data/news_reporter/processed/maritime_air_news.db"
 
 # Define table naming by date of execution
 #current_date = datetime.now().strftime("%m%d%Y")
-current_date = '03082024' # For testing purposes - cron jobs needed to keep the app updated
+current_date = '03082024' # For testing purposes - cron jobs or orchestrator needed to keep the app updated
 
 
 # Function to get news from the database based on the selected category
