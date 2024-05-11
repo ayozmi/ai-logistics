@@ -7,3 +7,11 @@ __pycache__
 models/news_reporter/bert_risk/**
 !models/bert_risk/manideepvmuela-sch-structure.png
 venv
+
+# DATA
+Sample_Product_Data_Batch_4.csv
+Sample_Product_Data_Batch_3.csv
+Sample_Product_Data_Batch_2.csv
+Sample_Product_Data_Batch_1.csv
+Sample_SKU_ID.csv
+Sample_Product_Data_Concat.csv
