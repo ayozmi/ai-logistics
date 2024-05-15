@@ -17,7 +17,7 @@ def main():
     for column in supply_ch_df_cleaned[['Revenue generated', 'Shipping costs', 'Manufacturing costs']]:
         supply_ch_df_cleaned.loc[:, column] = supply_ch_df_cleaned.loc[:, column].str.replace('[$,]', '', regex=True).astype(float)
 
-    # DW-3 Handling consistemcy in Routes instances
+    # DW-3: Handling consistemcy in Routes instances
     route_mapping = {
         'a': 'Route_A', 'A': 'Route_A', 'A route': 'Route_A', 'routeA': 'Route_A', 'route_A': 'Route_A',
         'b': 'Route_B', 'B': 'Route_B', 'B route': 'Route_B', 'routeB': 'Route_B', 'route_B': 'Route_B',
@@ -27,5 +27,8 @@ def main():
     # Apply the mapping to the 'Routes' column
     supply_ch_df_cleaned.loc[:, 'Routes'] = supply_ch_df_cleaned.loc[:, 'Routes'].replace(route_mapping)
 
+    # Save the cleaned dataframe
+    supply_ch_df_cleaned.to_csv('C:/repos/ai-logistics/data/price_predictor/staged/Sample_Product_Data_Cleaned.csv', index=False)
+    
 if __name__ == "__main__":
     main()
