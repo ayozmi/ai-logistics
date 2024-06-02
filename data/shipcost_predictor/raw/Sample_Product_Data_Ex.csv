@@ -1,7 +1,0 @@
-Product type,SKU,Estimated price,Availability,Number of products sold,Revenue generated,Customer demographics,Stock levels,Lead times,Order quantities,Shipping times,Shipping carriers,Shipping costs,Supplier name,Location,Lead time,Production volumes,Manufacturing lead time,Manufacturing costs,Inspection results,Defect rates,Transportation modes,Routes,Costs,Demurrage
-cosmetics,sku1,80200.0,51.0,933.0,$9010.19,Male,85.0,24.0,43.0,9.0,Carrier C,$300.00,Supplier 5,Delhi,6.0,184.0,7.0,$36.04,Pending,0.59,Sea,route_A,247.85,
-cosmetics,sku2,6100.0,54.0,777.0,$6802.45,,48.0,28.0,97.0,8.0,Carrier C,$499.00,Supplier 4,Mumbai,17.0,191.0,15.0,,Pending,1.78,Air,,850.05,0.0
-cosmetics,sku3,52720.0,21.0,387.0,$6637.92,Unknown,18.0,2.0,76.0,9.0,Carrier C,$885.00,Supplier 3,Kolkata,11.0,900.0,4.0,$59.12,Fail,2.57,Air,routeA,258.12,2207203.0
-,sku4,,38.0,806.0,$7184.22,Male,47.0,16.0,64.0,7.0,Carrier A,,Supplier 2,Delhi,10.0,483.0,6.0,$22.48,Pending,0.1,Sea,route_A,556.94,0.0
-haircare,sku5,95720.0,56.0,,$5264.44,Male,,19.0,38.0,,Carrier C,$763.00,Supplier 3,Delhi,14.0,573.0,3.0,$91.62,,3.2,Air,routeC,365.47,0.0
-cosmetics,sku6,78720.0,,722.0,$9992.73,Male,71.0,26.0,9.0,7.0,Carrier C,$678.00,Supplier 3,Bangalore,15.0,,10.0,$64.62,Pending,3.46,Road,,997.8,0.0
