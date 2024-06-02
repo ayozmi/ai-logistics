@@ -1,4 +1,4 @@
-# Price Predictor Feature
+# Shipping Cost Predictor Feature
 
 In the dynamic world of supply chain management, the ability to predict costs accurately is crucial for maintaining competitiveness and operational efficiency. One of the significant challenges faced by supply chain managers and logistics professionals is the unpredictability of shipping costs, which can fluctuate due to various factors such as fuel prices, geopolitical tensions, regulatory changes, and market demand. These fluctuations can lead to unexpected increases in operational costs, budget overruns, and reduced profit margins, making it essential to have a robust system for predictive cost modeling.
 
