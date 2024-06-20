@@ -53,7 +53,7 @@ def main():
     retained_columns = supply_chain_df_cleaned[['sku', 'customer_demographics', 'supplier_name', 'product_type', 'revenue_generated']]
 
     # Drop irrelevant columns for prediction
-    df = supply_chain_df_cleaned.drop(['sku', 'customer_demographics', 'supplier_name', 'product_type', 'revenue_generated'], axis=1)
+    df = supply_chain_df_cleaned.drop(['sku', 'customer_demographics', 'supplier_name'], axis=1)
 
     # Convert categorical variables to dummy variables
     X = pd.get_dummies(df)

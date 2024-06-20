@@ -4,6 +4,7 @@ from sklearn.preprocessing import StandardScaler
 import pickle
 import boto3
 import pandas as pd
+from sqlalchemy import create_engine
 
 # Load variables from .env file, ignoring lines without '='
 def load_env_variables(env_file='../.env'):
@@ -21,6 +22,22 @@ def load_env_variables(env_file='../.env'):
             if '=' in line and not line.strip().startswith('#'):
                 key, value = line.strip().split('=', 1)
                 os.environ[key] = value
+
+
+def load_data_to_mysql(merged_df, user, password, host, port, database, table_name):
+    """
+    Load data from a pandas dataframe to a MySQL database table.
+    """
+    # Create the connection string
+    connection_string = f'mysql+pymysql://{user}:{password}@{host}:{port}/{database}'
+    
+    # Create the database engine
+    engine = create_engine(connection_string)
+    
+    # Load the data into the database
+    merged_df.to_sql(name=table_name, con=engine, if_exists='append', index=False)
+    print("Data loaded successfully.")
+
 
 def main():
     load_env_variables()
@@ -80,8 +97,18 @@ def main():
     merged_df['demurrage_cost_prediction'] = predictions
     merged_df['demurrage_cost_prediction'] = merged_df['demurrage_cost_prediction'].astype(float)
 
-    print(merged_df.info())
-    print(merged_df.iloc[0])
+    # Adding a demurrage column
+    merged_df['demurrage_bin'] = True
+
+    DB_USER = os.getenv('DB_USER')
+    DB_PASSWORD = os.getenv('DB_PASSWORD')
+    DB_HOST = os.getenv('DB_HOST')
+    DB_PORT = os.getenv('DB_PORT')
+    DB_NAME = os.getenv('DB_NAME')
+    DB_TABLE = 'demurrage_predictor_data'
+
+    # Load Data to MySQL database
+    load_data_to_mysql(merged_df, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT , DB_NAME, DB_TABLE)
 
 
 if __name__ == "__main__":
