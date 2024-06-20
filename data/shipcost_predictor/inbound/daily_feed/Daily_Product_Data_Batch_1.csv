@@ -1,0 +1,26 @@
+Product type,SKU,Estimated price,Availability,Number of products sold,Revenue generated,Customer demographics,Stock levels,Lead times,Order quantities,Shipping times,Shipping carriers,Shipping costs,Supplier name,Location,Lead time,Production volumes,Manufacturing lead time,Manufacturing costs,Inspection results,Defect rates,Transportation modes,Routes,Costs
+cosmetics,62000005,4350,98,216,"$5,513.64 ",,28,5,16,6,Carrier C,$320.00 ,Supplier 1,Kolkata,28,406,9,$98.49 ,Fail,3.27,Rail,A route,329.95
+cosmetics,62000004,31840,11,407,"$1,638.02 ",Unknown,41,7,59,7,Carrier B,$713.00 ,Supplier 1,,6,599,15,$67.15 ,Fail,0.52,Rail,c,
+haircare,62000002,78270,10,399,,Male,66,26,81,4,Carrier A,$209.00 ,Supplier 5,Bangalore,12,721,28,$49.86 ,,1.27,Road,a,996.28
+haircare,62000003,,15,923,"$9,417.67 ",Non-binary,25,26,,4,Carrier A,$202.00 ,,Bangalore,11,,12,$54.20 ,Fail,,Sea,C route,817.38
+cosmetics,62000007,22790,17,715,"$8,656.12 ",Non-binary,58,24,79,7,Carrier A,$470.00 ,Supplier 1,Kolkata,16,168,21,$71.42 ,Pending,3.35,Rail,b,407.65
+skincare,62000006,22060,40,704,,,41,12,16,6,,$683.00 ,,Chennai,20,801,28,$19.14 ,Pass,0.07,Air,route_C,910.53
+haircare,1CUB0040GE,52000,18,761,"$6,651.94 ",Male,6,16,15,8,Carrier C,$741.00 ,Supplier 3,Mumbai,17,790,27,,,,Sea,A,146.06
+cosmetics,1CRG0020GE,97580,55,,"$3,227.59 ",Unknown,75,23,98,1,Carrier B,$261.00 ,Supplier 4,Kolkata,20,674,26,,Fail,3.41,Air,C,752.51
+haircare,1CUB0020GE,,,754,"$2,465.34 ",Male,38,8,11,7,Carrier A,,,Chennai,9,167,9,$16.60 ,Fail,3.82,Rail,route_A,
+haircare,1CUB0050GE,56170,25,465,"$2,682.23 ",Female,6,28,65,7,Carrier B,$946.00 ,Supplier 3,Chennai,1,817,14,$27.63 ,Pending,4.2,Sea,route_B,
+skincare,1MES0012GE,86200,,691,"$1,178.16 ",Non-binary,45,9,79,7,Carrier B,$335.00 ,Supplier 5,Chennai,26,507,,$53.67 ,Pass,1.46,Rail,route_A,988.83
+cosmetics,1VBA0260GE,53970,78,949,"$4,516.14 ",Unknown,75,15,90,7,Carrier A,$868.00 ,Supplier 1,Delhi,3,617,28,$80.63 ,Pass,4.66,Rail,a,424.8
+cosmetics,1VBA0140GE,19260,89,974,"$2,722.85 ",Female,14,5,68,8,,$877.00 ,Supplier 1,Delhi,21,218,26,$53.69 ,Fail,2.76,Sea,route_A,838.45
+skincare,1VBA0600GE,30660,22,731,"$4,704.90 ",Female,66,13,43,9,Carrier C,,Supplier 3,Chennai,23,924,6,$40.19 ,Fail,3.48,Rail,,438.48
+skincare,1VBA0300GE,31680,30,82,,Unknown,40,5,69,9,Carrier B,$252.00 ,Supplier 1,Bangalore,9,,19,$17.41 ,Fail,2.98,Sea,route_A,856.03
+cosmetics,1VBA0580GE,40330,84,604,"$4,874.86 ",Unknown,3,11,99,2,Carrier A,$840.00 ,Supplier 2,Delhi,22,617,4,$59.53 ,Fail,,,route_A,968.9
+cosmetics,1VBF0760GE,43250,85,947,"$8,901.86 ",Female,99,10,13,7,Carrier C,$792.00 ,,Kolkata,19,582,,,Pass,4.82,Road,,491.98
+skincare,1VBF0810GE,80180,44,687,"$6,449.54 ",Male,97,20,10,7,Carrier C,$637.00 ,Supplier 4,Delhi,13,306,17,$65.34 ,Pending,0.61,Air,b,603.41
+haircare,1VBG0785GE,35590,32,,"$3,224.18 ",Female,,13,75,4,Carrier B,$403.00 ,Supplier 3,Bangalore,23,768,19,$97.95 ,Pass,1.27,Road,route_C,665.78
+haircare,1VBS0070GE,47350,51,,,Unknown,19,9,82,9,Carrier B,$336.00 ,Supplier 4,Mumbai,14,678,3,$20.02 ,Pending,4.07,Rail,,941.35
+skincare,1VMG0080GE,62870,46,903,"$1,755.28 ",Female,18,21,98,8,Carrier C,$210.00 ,Supplier 5,Delhi,20,486,29,$29.09 ,Fail,3.09,Rail,C route,331.07
+haircare,1VMP0106GE,38390,21,365,"$4,001.16 ",,64,14,41,,Carrier B,$559.00 ,Supplier 4,Chennai,19,511,14,$52.58 ,Fail,4.19,Rail,routeB,650.12
+skincare,1VMG0140GE,83820,99,163,"$7,097.87 ",Non-binary,88,18,50,2,Carrier A,$627.00 ,Supplier 2,Chennai,23,941,17,$97.18 ,Pending,2.58,Road,route_B,392.25
+haircare,1VRH0010GE,59160,32,48,"$1,649.00 ",,35,15,87,2,Carrier B,$423.00 ,Supplier 2,Chennai,27,469,13,$79.46 ,Fail,1.88,Rail,route_A,295.24
+haircare,1VMP0116GE,30110,94,511,"$2,848.61 ",Female,62,,71,8,Carrier B,$528.00 ,Supplier 4,Mumbai,27,452,9,$90.84 ,Pass,,Sea,A route,176.43
