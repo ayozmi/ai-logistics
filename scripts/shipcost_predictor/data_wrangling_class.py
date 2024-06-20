@@ -1,10 +1,8 @@
 # Imports
 import pandas as pd
 import boto3
-from io import StringIO, BytesIO
+from io import StringIO
 import os
-import pickle
-from sklearn.preprocessing import StandardScaler
 
 # Load variables from .env file, ignoring lines without '='
 def load_env_variables(env_file='../.env'):
