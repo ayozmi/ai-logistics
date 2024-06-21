@@ -4,6 +4,7 @@ import torch
 import joblib
 from sklearn.preprocessing import LabelEncoder
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
+import mysql.connector
 
 
 class Helper:
@@ -11,31 +12,40 @@ class Helper:
         self.db_path = db_path
         self.news_table_name = news_table_name
 
-    def connect_to_db(self):
+    def connect_to_db_mysql(self):
         """ """
+        return mysql.connector.connect(
+            host='127.0.0.1',
+            port='3307',
+            user='logimo_news_api',
+            password='123456',
+            database='logimo_news')
+
+    def connect_to_db_sqlite(self):
         return sqlite3.connect(self.db_path)
 
     # Create a new table for storing only daily articles
     def create_daily_news_table(self, cursor):
         """ """
         cursor.execute(
-            f"""CREATE TABLE IF NOT EXISTS {self.news_table_name} (
-                            id INTEGER PRIMARY KEY AUTOINCREMENT,
-                            title TEXT,
-                            text TEXT,
-                            summary TEXT,
-                            classification TEXT,
-                            ml_classification TEXT,
-                            location TEXT,
-                            link TEXT,
-                            date DATE
-                        );"""
+            f"""CREATE TABLE IF NOT EXISTS news (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                title VARCHAR(255),
+                text TEXT,
+                summary TEXT,
+                classification VARCHAR(255),
+                ml_classification VARCHAR(255),
+                location VARCHAR(255),
+                link VARCHAR(255),
+                date DATE,
+                `type` VARCHAR(10)
+            );"""
         )
 
     def initialize_tables(self):
         """ """
         # Establish a connection and create a cursor
-        conn = self.connect_to_db()
+        conn = self.connect_to_db_mysql()
         cursor = conn.cursor()
 
         # Create tables for today's date with news
@@ -61,28 +71,29 @@ class Helper:
         return response.choices[0].text.strip()
 
     def insert_article_data(
-        self,
-        cursor,
-        article_title,
-        article_text,
-        summary,
-        classification,
-        ml_classification,
-        location,
-        link,
-        date,
+            self,
+            cursor,
+            article_title,
+            article_text,
+            summary,
+            classification,
+            ml_classification,
+            location,
+            link,
+            date,
+            type
     ):
         """ """
         # Check if an article with the same title already exists
         cursor.execute(
-            f"SELECT id FROM {self.news_table_name} WHERE title = ?", (article_title,)
+            f"SELECT id FROM news WHERE title = %s", (article_title,)
         )
         existing_article = cursor.fetchone()
 
         if existing_article is None:
             cursor.execute(
-                f"""INSERT INTO {self.news_table_name} (title, text, summary, classification, ml_classification, location, link, date)
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?);""",
+                f"""INSERT INTO news (title, text, summary, classification, ml_classification, location, link, date, type)
+                            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);""",
                 (
                     article_title,
                     article_text,
@@ -92,6 +103,7 @@ class Helper:
                     location,
                     link,
                     date,
+                    type,
                 ),
             )
 
@@ -115,7 +127,7 @@ class Helper:
     # Function to classify text with BERT model
     def ml_classification(self, text):
         # Load the models and tokenizer
-        path_to_bert_model = "models/bert_risk/"
+        path_to_bert_model = "../../models/news_reporter/bert_risk/"
         cls_model = AutoModelForSequenceClassification.from_pretrained(
             path_to_bert_model
         )

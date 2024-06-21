@@ -28,13 +28,13 @@ helper_obj = Helper(db_path, air_news_table_name)
 
 
 # Load keywords from JSON file for classification
-with open("json/keywords.json", "r") as file:
+with open("../../data/news_reporter/processed/keywords.json", "r") as file:
     keywords = json.load(file)
 
 
 def main():
     """ """
-    conn = helper_obj.connect_to_db()
+    conn = helper_obj.connect_to_db_mysql()
     cursor = conn.cursor()
     # Initialize DDBB and create tables
     helper_obj.initialize_tables()
@@ -108,7 +108,8 @@ def main():
                 ml_classification,
                 location,
                 items_url,
-                date_obj
+                date_obj,
+                'air'
             )
             conn.commit()
 
