@@ -18,8 +18,6 @@ try{
 //    Comment for easier debugging
 //    TODO: Uncomment
 //    if (isset($captchaResponse) && !empty($captchaResponse)) { // Check if Captcha is checked
-//        //Site secret key
-//        $secret = "6Lcb2w0gAAAAABsJbFlp9zO2wpCZeHAbm-tNlMzG";
 //        //Get verify response data
 //        $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . $captchaResponse);
 //        $responseData = json_decode($verifyResponse);
