@@ -3081,3 +3081,17 @@ ModuleNotFoundError: No module named 'sklearn'
 [2024-06-22T12:50:37.815+0000] {logging_mixin.py:188} INFO - [2024-06-22T12:50:37.815+0000] {dag.py:3047} INFO - Sync 1 DAGs
 [2024-06-22T12:50:37.848+0000] {logging_mixin.py:188} INFO - [2024-06-22T12:50:37.847+0000] {dag.py:3834} INFO - Setting next_dagrun for DAG_ml_pipeline_class_reg to 2024-06-22 12:00:00+00:00, run_after=2024-06-23 00:00:00+00:00
 [2024-06-22T12:50:37.892+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/run_data_wrangling_class_reg.py took 1.274 seconds
+[2024-06-22T12:51:08.170+0000] {processor.py:161} INFO - Started process (PID=4605) to work on /opt/airflow/dags/run_data_wrangling_class_reg.py
+[2024-06-22T12:51:08.172+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/run_data_wrangling_class_reg.py for tasks to queue
+[2024-06-22T12:51:08.173+0000] {logging_mixin.py:188} INFO - [2024-06-22T12:51:08.173+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/run_data_wrangling_class_reg.py
+[2024-06-22T12:51:09.002+0000] {processor.py:840} INFO - DAG(s) 'DAG_ml_pipeline_class_reg' retrieved from /opt/airflow/dags/run_data_wrangling_class_reg.py
+[2024-06-22T12:51:09.024+0000] {logging_mixin.py:188} INFO - [2024-06-22T12:51:09.024+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-06-22T12:51:09.051+0000] {logging_mixin.py:188} INFO - [2024-06-22T12:51:09.050+0000] {dag.py:3834} INFO - Setting next_dagrun for DAG_ml_pipeline_class_reg to 2024-06-22 12:00:00+00:00, run_after=2024-06-23 00:00:00+00:00
+[2024-06-22T12:51:09.090+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/run_data_wrangling_class_reg.py took 0.923 seconds
+[2024-06-22T12:51:39.338+0000] {processor.py:161} INFO - Started process (PID=4620) to work on /opt/airflow/dags/run_data_wrangling_class_reg.py
+[2024-06-22T12:51:39.339+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/run_data_wrangling_class_reg.py for tasks to queue
+[2024-06-22T12:51:39.341+0000] {logging_mixin.py:188} INFO - [2024-06-22T12:51:39.340+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/run_data_wrangling_class_reg.py
+[2024-06-22T12:51:40.141+0000] {processor.py:840} INFO - DAG(s) 'DAG_ml_pipeline_class_reg' retrieved from /opt/airflow/dags/run_data_wrangling_class_reg.py
+[2024-06-22T12:51:40.163+0000] {logging_mixin.py:188} INFO - [2024-06-22T12:51:40.162+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-06-22T12:51:40.185+0000] {logging_mixin.py:188} INFO - [2024-06-22T12:51:40.185+0000] {dag.py:3834} INFO - Setting next_dagrun for DAG_ml_pipeline_class_reg to 2024-06-22 12:00:00+00:00, run_after=2024-06-23 00:00:00+00:00
+[2024-06-22T12:51:40.212+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/run_data_wrangling_class_reg.py took 0.877 seconds
