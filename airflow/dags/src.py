@@ -6,6 +6,7 @@ import joblib
 from sklearn.preprocessing import LabelEncoder
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import mysql.connector
+import boto3
 
 
 # Load variables from .env file, ignoring lines without '='
@@ -147,8 +148,26 @@ class Helper:
 
     # Function to classify text with BERT model
     def ml_classification(self, text):
+
+        # Initialize S3 client
+        s3 = boto3.client('s3')
+
+        # Define the S3 bucket and folder
+        bucket_name = 'logimo-outbound'
+        folder_name = 'news-reporter-models-files/'
+
+        # Download the files from S3
+        s3.download_file(bucket_name, f'{folder_name}config.json', 'config.json')
+        s3.download_file(bucket_name, f'{folder_name}encoder_labels.pkl', 'encoder_labels.pkl')
+        s3.download_file(bucket_name, f'{folder_name}keywords.json', 'keywords.json')
+        s3.download_file(bucket_name, f'{folder_name}model.safetensors', 'model.safetensors')
+        s3.download_file(bucket_name, f'{folder_name}special_tokens_map.json', 'special_tokens_map.json')
+        s3.download_file(bucket_name, f'{folder_name}spiece.model', 'spiece.model')
+        s3.download_file(bucket_name, f'{folder_name}tokenizer_config.json', 'tokenizer_config.json')
+        s3.download_file(bucket_name, f'{folder_name}tokenizer.json', 'tokenizer.json')
+        
         # Load the models and tokenizer
-        path_to_bert_model = "../../models/news_reporter/bert_risk/"
+        path_to_bert_model = "../../news-reporter-models-files/"
         cls_model = AutoModelForSequenceClassification.from_pretrained(
             path_to_bert_model
         )

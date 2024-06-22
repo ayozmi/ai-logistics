@@ -6,6 +6,8 @@ from datetime import datetime, timedelta
 from air_scrappers_tasks.air_page_2 import main_air
 from air_scrappers_tasks.air_page_2_latam import main_air_2_latam
 from maritime_scrapers_task.maritime_page_1 import main_maritime
+from maritime_scrapers_task.maritime_page_1_latam import main_maritime_latam
+from maritime_scrapers_task.maritime_page_2 import main_maritime_page_2
 
 default_args = {
     'owner': 'airflow',
@@ -39,9 +41,21 @@ run_latam_air_scrapper = PythonOperator(
 
 run_main_maritime_scrapper = PythonOperator(
     task_id='run_main_maritime_scrapper',
-    python_callable=main_maritime,
+    python_callable=main_maritime
+    dag=dag,
+)
+
+run_main_maritime_latam_scrapper = PythonOperator(
+    task_id='run_main_maritime_latam_scrapper',
+    python_callable=main_maritime_latam,
+    dag=dag,
+)
+
+run_main_maritime_2_scrapper = PythonOperator(
+    task_id='run_main_maritime_2_scrapper',
+    python_callable=main_maritime_page_2,
     dag=dag,
 )
 
 
-run_main_air_scrapper >> run_latam_air_scrapper >> run_main_maritime_scrapper
+run_main_air_scrapper >> run_latam_air_scrapper >> run_main_maritime_scrapper >> run_main_maritime_latam_scrapper >> run_main_maritime_2_scrapper
