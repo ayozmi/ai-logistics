@@ -14,12 +14,13 @@ class Helper:
 
     def connect_to_db_mysql(self):
         """ """
+        # TODO add credentials
         return mysql.connector.connect(
-            host='127.0.0.1',
-            port='3307',
-            user='logimo_news_api',
-            password='123456',
-            database='logimo_news')
+            host='',
+            port='',
+            user='',
+            password='',
+            database='')
 
     def connect_to_db_sqlite(self):
         return sqlite3.connect(self.db_path)

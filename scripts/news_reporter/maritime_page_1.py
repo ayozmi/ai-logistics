@@ -28,7 +28,7 @@ mar_news_table_name = f"mar_news_{current_date}"
 helper_obj = Helper(db_path, mar_news_table_name)
 
 # Load keywords from JSON file for classification
-with open("json/keywords.json", "r") as file:
+with open("../../data/news_reporter/processed/keywords.json", "r") as file:
     keywords = json.load(file)
 
 
@@ -76,7 +76,7 @@ def main():
     premium = False
 
     # Connect to DDBB
-    conn = helper_obj.connect_to_db()
+    conn = helper_obj.connect_to_db_mysql()
     cursor = conn.cursor()
 
     print(f"\nGetting {location} news...")
@@ -132,6 +132,7 @@ def main():
                 location,
                 article,
                 date_object,
+                'maritime'
             )
             conn.commit()
 
