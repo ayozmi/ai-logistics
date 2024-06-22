@@ -1,0 +1,27 @@
+[2024-06-22T12:48:36.253+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: DAG_ml_pipeline_class_reg.run_modeling_regression manual__2024-06-22T12:48:25.037871+00:00 [queued]>
+[2024-06-22T12:48:36.266+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: DAG_ml_pipeline_class_reg.run_modeling_regression manual__2024-06-22T12:48:25.037871+00:00 [queued]>
+[2024-06-22T12:48:36.267+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-22T12:48:36.287+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): run_modeling_regression> on 2024-06-22 12:48:25.037871+00:00
+[2024-06-22T12:48:36.299+0000] {standard_task_runner.py:60} INFO - Started process 3121 to run task
+[2024-06-22T12:48:36.303+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'DAG_ml_pipeline_class_reg', 'run_modeling_regression', 'manual__2024-06-22T12:48:25.037871+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/run_data_wrangling_class_reg.py', '--cfg-path', '/tmp/tmp15s8xh83']
+[2024-06-22T12:48:36.306+0000] {standard_task_runner.py:88} INFO - Job 39: Subtask run_modeling_regression
+[2024-06-22T12:48:36.370+0000] {task_command.py:423} INFO - Running <TaskInstance: DAG_ml_pipeline_class_reg.run_modeling_regression manual__2024-06-22T12:48:25.037871+00:00 [running]> on host 0fdcf3d7bc80
+[2024-06-22T12:48:36.466+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='DAG_ml_pipeline_class_reg' AIRFLOW_CTX_TASK_ID='run_modeling_regression' AIRFLOW_CTX_EXECUTION_DATE='2024-06-22T12:48:25.037871+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-22T12:48:25.037871+00:00'
+[2024-06-22T12:48:36.468+0000] {logging_mixin.py:188} INFO - Looking for .env file at: /opt/***/config/.env
+[2024-06-22T12:48:36.492+0000] {credentials.py:1278} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2024-06-22T12:48:41.949+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.4.1.post1 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-22T12:48:41.968+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.4.1.post1 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-22T12:48:41.969+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/base.py:465: UserWarning: X does not have valid feature names, but RandomForestRegressor was fitted with feature names
+  warnings.warn(
+
+[2024-06-22T12:48:44.820+0000] {logging_mixin.py:188} INFO - Data loaded successfully, ignoring duplicates.
+[2024-06-22T12:48:44.824+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-06-22T12:48:44.834+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=DAG_ml_pipeline_class_reg, task_id=run_modeling_regression, execution_date=20240622T124825, start_date=20240622T124836, end_date=20240622T124844
+[2024-06-22T12:48:44.885+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-22T12:48:44.900+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

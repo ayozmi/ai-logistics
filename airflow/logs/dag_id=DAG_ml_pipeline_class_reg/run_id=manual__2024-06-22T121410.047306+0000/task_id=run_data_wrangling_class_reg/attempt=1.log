@@ -1,0 +1,16 @@
+[2024-06-22T12:14:12.553+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: DAG_ml_pipeline_class_reg.run_data_wrangling_class_reg manual__2024-06-22T12:14:10.047306+00:00 [queued]>
+[2024-06-22T12:14:12.566+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: DAG_ml_pipeline_class_reg.run_data_wrangling_class_reg manual__2024-06-22T12:14:10.047306+00:00 [queued]>
+[2024-06-22T12:14:12.569+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-22T12:14:12.589+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): run_data_wrangling_class_reg> on 2024-06-22 12:14:10.047306+00:00
+[2024-06-22T12:14:12.598+0000] {standard_task_runner.py:60} INFO - Started process 2513 to run task
+[2024-06-22T12:14:12.603+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'DAG_ml_pipeline_class_reg', 'run_data_wrangling_class_reg', 'manual__2024-06-22T12:14:10.047306+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/run_data_wrangling_class_reg.py', '--cfg-path', '/tmp/tmp38k8norx']
+[2024-06-22T12:14:12.608+0000] {standard_task_runner.py:88} INFO - Job 31: Subtask run_data_wrangling_class_reg
+[2024-06-22T12:14:12.680+0000] {task_command.py:423} INFO - Running <TaskInstance: DAG_ml_pipeline_class_reg.run_data_wrangling_class_reg manual__2024-06-22T12:14:10.047306+00:00 [running]> on host 0fdcf3d7bc80
+[2024-06-22T12:14:12.782+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='DAG_ml_pipeline_class_reg' AIRFLOW_CTX_TASK_ID='run_data_wrangling_class_reg' AIRFLOW_CTX_EXECUTION_DATE='2024-06-22T12:14:10.047306+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-22T12:14:10.047306+00:00'
+[2024-06-22T12:14:12.785+0000] {logging_mixin.py:188} INFO - Looking for .env file at: /opt/***/config/.env
+[2024-06-22T12:14:12.818+0000] {credentials.py:1278} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2024-06-22T12:14:14.543+0000] {logging_mixin.py:188} INFO - Concatenated file saved to s3://logimo-aligned/ship_cost_predictor/daily_feed_pred/Daily_Product_Data_Cleaned.csv
+[2024-06-22T12:14:14.546+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-06-22T12:14:14.560+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=DAG_ml_pipeline_class_reg, task_id=run_data_wrangling_class_reg, execution_date=20240622T121410, start_date=20240622T121412, end_date=20240622T121414
+[2024-06-22T12:14:14.628+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-22T12:14:14.665+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

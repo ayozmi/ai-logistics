@@ -1,0 +1,42 @@
+[2024-06-22T11:19:10.225+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: DAG_ml_pipeline_class_reg.run_data_wrangling_class_reg manual__2024-06-22T11:19:08.184951+00:00 [queued]>
+[2024-06-22T11:19:10.234+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: DAG_ml_pipeline_class_reg.run_data_wrangling_class_reg manual__2024-06-22T11:19:08.184951+00:00 [queued]>
+[2024-06-22T11:19:10.235+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-22T11:19:10.250+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): run_data_wrangling_class_reg> on 2024-06-22 11:19:08.184951+00:00
+[2024-06-22T11:19:10.256+0000] {standard_task_runner.py:60} INFO - Started process 1343 to run task
+[2024-06-22T11:19:10.259+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'DAG_ml_pipeline_class_reg', 'run_data_wrangling_class_reg', 'manual__2024-06-22T11:19:08.184951+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/run_data_wrangling_class_reg.py', '--cfg-path', '/tmp/tmpfai_ommp']
+[2024-06-22T11:19:10.261+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask run_data_wrangling_class_reg
+[2024-06-22T11:19:10.306+0000] {task_command.py:423} INFO - Running <TaskInstance: DAG_ml_pipeline_class_reg.run_data_wrangling_class_reg manual__2024-06-22T11:19:08.184951+00:00 [running]> on host 0fdcf3d7bc80
+[2024-06-22T11:19:10.373+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='DAG_ml_pipeline_class_reg' AIRFLOW_CTX_TASK_ID='run_data_wrangling_class_reg' AIRFLOW_CTX_EXECUTION_DATE='2024-06-22T11:19:08.184951+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-22T11:19:08.184951+00:00'
+[2024-06-22T11:19:10.374+0000] {logging_mixin.py:188} INFO - Looking for .env file at: /opt/***/../../.env
+[2024-06-22T11:19:10.375+0000] {logging_mixin.py:188} INFO - .env file does not exist at: /opt/***/../../.env
+[2024-06-22T11:19:10.481+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/data_wrangling_tasks/data_wrangling_class_reg.py", line 40, in main_data_wrangling
+    response = s3.list_objects_v2(Bucket=bucket_name, Prefix=f'{prefix}/daily_feed')
+  File "/home/airflow/.local/lib/python3.8/site-packages/botocore/client.py", line 553, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/botocore/client.py", line 946, in _make_api_call
+    api_params = self._emit_api_params(
+  File "/home/airflow/.local/lib/python3.8/site-packages/botocore/client.py", line 1072, in _emit_api_params
+    self.meta.events.emit(
+  File "/home/airflow/.local/lib/python3.8/site-packages/botocore/hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/botocore/hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/botocore/hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/botocore/handlers.py", line 282, in validate_bucket_name
+    if not VALID_BUCKET.search(bucket) and not VALID_S3_ARN.search(bucket):
+TypeError: expected string or bytes-like object
+[2024-06-22T11:19:10.498+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=DAG_ml_pipeline_class_reg, task_id=run_data_wrangling_class_reg, execution_date=20240622T111908, start_date=20240622T111910, end_date=20240622T111910
+[2024-06-22T11:19:10.524+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task run_data_wrangling_class_reg (expected string or bytes-like object; 1343)
+[2024-06-22T11:19:10.553+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-06-22T11:19:10.578+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

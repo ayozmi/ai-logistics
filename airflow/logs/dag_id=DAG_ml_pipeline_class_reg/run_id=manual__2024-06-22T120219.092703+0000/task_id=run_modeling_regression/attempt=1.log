@@ -1,0 +1,48 @@
+[2024-06-22T12:02:28.547+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: DAG_ml_pipeline_class_reg.run_modeling_regression manual__2024-06-22T12:02:19.092703+00:00 [queued]>
+[2024-06-22T12:02:28.558+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: DAG_ml_pipeline_class_reg.run_modeling_regression manual__2024-06-22T12:02:19.092703+00:00 [queued]>
+[2024-06-22T12:02:28.559+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-06-22T12:02:28.576+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonOperator): run_modeling_regression> on 2024-06-22 12:02:19.092703+00:00
+[2024-06-22T12:02:28.583+0000] {standard_task_runner.py:60} INFO - Started process 2197 to run task
+[2024-06-22T12:02:28.586+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'DAG_ml_pipeline_class_reg', 'run_modeling_regression', 'manual__2024-06-22T12:02:19.092703+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/run_data_wrangling_class_reg.py', '--cfg-path', '/tmp/tmplrv9_0oe']
+[2024-06-22T12:02:28.590+0000] {standard_task_runner.py:88} INFO - Job 21: Subtask run_modeling_regression
+[2024-06-22T12:02:28.649+0000] {task_command.py:423} INFO - Running <TaskInstance: DAG_ml_pipeline_class_reg.run_modeling_regression manual__2024-06-22T12:02:19.092703+00:00 [running]> on host 0fdcf3d7bc80
+[2024-06-22T12:02:28.739+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='DAG_ml_pipeline_class_reg' AIRFLOW_CTX_TASK_ID='run_modeling_regression' AIRFLOW_CTX_EXECUTION_DATE='2024-06-22T12:02:19.092703+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-22T12:02:19.092703+00:00'
+[2024-06-22T12:02:28.742+0000] {logging_mixin.py:188} INFO - Looking for .env file at: /opt/***/config/.env
+[2024-06-22T12:02:28.770+0000] {credentials.py:1278} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2024-06-22T12:02:31.745+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.4.1.post1 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-22T12:02:31.766+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.4.1.post1 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-22T12:02:31.768+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/sklearn/base.py:465: UserWarning: X does not have valid feature names, but RandomForestRegressor was fitted with feature names
+  warnings.warn(
+
+[2024-06-22T12:02:31.779+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/modeling_reg_tasks/modeling_reg.py", line 111, in main_modeling_reg
+    load_data_to_mysql(merged_df, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT , DB_NAME, DB_TABLE)
+  File "/opt/airflow/dags/modeling_reg_tasks/modeling_reg.py", line 35, in load_data_to_mysql
+    engine = create_engine(connection_string)
+  File "<string>", line 2, in create_engine
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py", line 375, in warned
+    return fn(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 544, in create_engine
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/dialects/mysql/pymysql.py", line 80, in dbapi
+    return __import__("pymysql")
+ModuleNotFoundError: No module named 'pymysql'
+[2024-06-22T12:02:31.816+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=DAG_ml_pipeline_class_reg, task_id=run_modeling_regression, execution_date=20240622T120219, start_date=20240622T120228, end_date=20240622T120231
+[2024-06-22T12:02:31.839+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 21 for task run_modeling_regression (No module named 'pymysql'; 2197)
+[2024-06-22T12:02:31.898+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-06-22T12:02:31.919+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
