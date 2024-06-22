@@ -16,3 +16,7 @@ venv
 Sample_SKU_ID.csv
 #Sample_Product_Data_Concat.csv
 #Sample_Product_Data_Cleaned.csv
+
+airflow/logs
+airflow/plugins
+airflow/config
