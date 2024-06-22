@@ -9,7 +9,7 @@ import mysql.connector
 
 
 # Load variables from .env file, ignoring lines without '='
-def load_env_variables(env_file='../.env'): # env_file='../.env' env_file='/opt/airflow/config/.env'
+def load_env_variables(env_file='/opt/airflow/config/.env'): # env_file='../.env' env_file='/opt/airflow/config/.env'
     current_dir = os.getcwd()
     env_path = os.path.join(current_dir, '..', env_file)
         
