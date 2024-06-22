@@ -10,9 +10,28 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from src import Helper
+import boto3
+from botocore.exceptions import NoCredentialsError
 
 # Load the variables from .env into the environment
 load_dotenv()
+
+def read_keywords_from_s3(bucket_name, file_key):
+    s3 = boto3.client('s3')
+    try:
+        response = s3.get_object(Bucket=bucket_name, Key=file_key)
+        content = response['Body'].read().decode('utf-8')
+        return json.loads(content)
+    except NoCredentialsError:
+        print("Credentials not available")
+        return None
+
+# S3 bucket and file key
+bucket_name = "logimo-outbound"
+file_key = "news-reporter-models-files/keywords.json"
+
+# Load keywords from S3
+keywords = read_keywords_from_s3(bucket_name, file_key)
 
 # Maritime news website 1
 URL = "https://www.maritimelogisticsprofessional.com"
@@ -25,12 +44,8 @@ mar_news_table_name = f"mar_news_{current_date}"
 
 helper_obj = Helper(db_path, mar_news_table_name)
 
-# Load keywords from JSON file for classification
-with open("../../data/news_reporter/processed/keywords.json", "r") as file:
-    keywords = json.load(file)
 
-
-def main():
+def main_maritime_latam():
     """ """
     # Initialize DDBB and create tables
     helper_obj.initialize_tables()
@@ -173,4 +188,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main_maritime_latam()

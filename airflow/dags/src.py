@@ -6,6 +6,7 @@ import joblib
 from sklearn.preprocessing import LabelEncoder
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import mysql.connector
+import boto3
 
 
 # Load variables from .env file, ignoring lines without '='
@@ -147,6 +148,7 @@ class Helper:
 
     # Function to classify text with BERT model
     def ml_classification(self, text):
+
         # Load the models and tokenizer
         path_to_bert_model = "../../models/news_reporter/bert_risk/"
         cls_model = AutoModelForSequenceClassification.from_pretrained(
