@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="02adfc43-64f6-4a47-a0f4-dbe012a86857" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/air_page_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/air_page_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/air_page_2_latam.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/air_page_2_latam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1_latam.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1_latam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/news_reporter/src.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/src.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +51,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.maritime_page_2">
     <configuration name="air_page_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai-logistics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,8 +74,100 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="air_page_2_latam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai-logistics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/news_reporter" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/news_reporter/air_page_2_latam.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="maritime_page_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai-logistics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/news_reporter" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="maritime_page_1_latam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai-logistics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/news_reporter" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1_latam.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="maritime_page_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai-logistics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts/news_reporter" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/news_reporter/maritime_page_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.maritime_page_2" />
+        <item itemvalue="Python.maritime_page_1_latam" />
+        <item itemvalue="Python.maritime_page_1" />
+        <item itemvalue="Python.air_page_2_latam" />
         <item itemvalue="Python.air_page_2" />
       </list>
     </recent_temporary>
@@ -91,6 +186,7 @@
       <workItem from="1717664185071" duration="61000" />
       <workItem from="1717955481302" duration="1000" />
       <workItem from="1718087046780" duration="599000" />
+      <workItem from="1719055485581" duration="4054000" />
     </task>
     <servers />
   </component>
@@ -98,7 +194,11 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ai_logistics$air_page_2.coverage" NAME="air_page_2 Coverage Results" MODIFIED="1717347803750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/news_reporter" />
+    <SUITE FILE_PATH="coverage/ai_logistics$air_page_2.coverage" NAME="air_page_2 Coverage Results" MODIFIED="1719057046773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/news_reporter" />
+    <SUITE FILE_PATH="coverage/ai_logistics$maritime_page_1.coverage" NAME="maritime_page_1 Coverage Results" MODIFIED="1719057966083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/news_reporter" />
+    <SUITE FILE_PATH="coverage/ai_logistics$air_page_2_latam.coverage" NAME="air_page_2_latam Coverage Results" MODIFIED="1719057469348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/news_reporter" />
+    <SUITE FILE_PATH="coverage/ai_logistics$maritime_page_2.coverage" NAME="maritime_page_2 Coverage Results" MODIFIED="1719058134184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/news_reporter" />
+    <SUITE FILE_PATH="coverage/ai_logistics$maritime_page_1_latam.coverage" NAME="maritime_page_1_latam Coverage Results" MODIFIED="1719058077956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/news_reporter" />
     <SUITE FILE_PATH="coverage/ai_logistics$src.coverage" NAME="src Coverage Results" MODIFIED="1717340520375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/news_reporter" />
   </component>
 </project>
