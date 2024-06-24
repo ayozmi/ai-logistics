@@ -10,7 +10,7 @@ from maritime_scrapers_task.maritime_page_1_latam import main_maritime_latam
 from maritime_scrapers_task.maritime_page_2 import main_maritime_page_2
 
 default_args = {
-    'owner': 'airflow',
+    'owner': 'Pablo Ruiz Lopez',
     'depends_on_past': False,
     'email_on_failure': False,
     'email_on_retry': False,
@@ -41,7 +41,7 @@ run_latam_air_scrapper = PythonOperator(
 
 run_main_maritime_scrapper = PythonOperator(
     task_id='run_main_maritime_scrapper',
-    python_callable=main_maritime
+    python_callable=main_maritime,
     dag=dag,
 )
 

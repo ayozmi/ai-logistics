@@ -8,7 +8,7 @@ from modeling_class_tasks.modeling_class import main_modeling_class
 from modeling_reg_tasks.modeling_reg import main_modeling_reg
 
 default_args = {
-    'owner': 'airflow',
+    'owner': 'Pablo Ruiz Lopez',
     'depends_on_past': False,
     'email_on_failure': False,
     'email_on_retry': False,
