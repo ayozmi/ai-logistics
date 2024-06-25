@@ -42,18 +42,18 @@ Welcome to **Logimo**, an advanced AI-driven platform specifically designed for 
 ## Repository Structure
 
 - **ai-logistics** (root directory)
-  - `**Airflow/**`
-    - **docker-compose.yml**: Configuration file for building a Docker image to create the Airflow environment.
-    - **dags/**: Contains Directed Acyclic Graphs (DAGs) running the machine learning pipeline for both classification and regression tasks.
-  - **app/**
-    - **streamlit_app.py**: Prototype of the Streamlit application for news web scraping.
-  - **data/**
+  - `Airflow/`
+    - `docker-compose.yml`: Configuration file for building a Docker image to create the Airflow environment.
+    - `dags/`: Contains Directed Acyclic Graphs (DAGs) running the machine learning pipeline for both classification and regression tasks.
+  - `app/`
+    - `streamlit_app.py`: Prototype of the Streamlit application for news web scraping.
+  - `data/`
     - Local data folder structure demonstrating the data lake architecture, including sample CSV datasets for each feature.
-  - **documentation/**
+  - `documentation/`
     - Comprehensive documentation covering each feature, data sources, and justifications for chosen methodologies.
-  - **images/**
+  - `images/`
     - Media files to assist in project understanding and visualization.
-  - **notebooks/**
+  - `notebooks/`
     - Jupyter notebooks following a structured data science methodology:
       1. Problem Statement
       2. Data Sources
@@ -61,11 +61,11 @@ Welcome to **Logimo**, an advanced AI-driven platform specifically designed for 
       4. Exploratory Data Analysis (EDA) and Data Visualization
       5. Feature Engineering
       6. Machine Learning Model Training and Evaluation
-  - **scripts/**
+  - `scripts/`
     - Executable scripts for the machine learning pipeline, including classification, regression, NLP tasks, data lake interactions, and database operations.
-  - **web_app/**
+  - `web_app/`
     - PHP application code for the web interface.
-  - **.env.example**
+  - `.env.example`
     - Example environment configuration file.
 
 ## Getting Started
@@ -82,14 +82,14 @@ Ensure you have the following installed:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/ai-logistics.git
+    git clone https://github.com/pablo-git8/ai-logistics.git
     cd ai-logistics
     ```
 
 2. Set up the Airflow environment:
     ```sh
     cd Airflow
-    docker-compose up -d
+    docker-compose up --build
     ```
 
 3. Configure environment variables:
