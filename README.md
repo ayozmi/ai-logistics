@@ -42,7 +42,7 @@ Welcome to **Logimo**, an advanced AI-driven platform specifically designed for 
 ## Repository Structure
 
 - **ai-logistics** (root directory)
-  - **Airflow/**
+  - `**Airflow/**`
     - **docker-compose.yml**: Configuration file for building a Docker image to create the Airflow environment.
     - **dags/**: Contains Directed Acyclic Graphs (DAGs) running the machine learning pipeline for both classification and regression tasks.
   - **app/**
