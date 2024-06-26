@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="02adfc43-64f6-4a47-a0f4-dbe012a86857" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/air_page_2_latam.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/air_page_2_latam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1_latam.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_1_latam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/maritime_page_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/news_reporter/src.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/news_reporter/src.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +181,9 @@
       <workItem from="1717664185071" duration="61000" />
       <workItem from="1717955481302" duration="1000" />
       <workItem from="1718087046780" duration="599000" />
-      <workItem from="1719055485581" duration="4054000" />
+      <workItem from="1719055485581" duration="5142000" />
+      <workItem from="1719255677026" duration="30000" />
+      <workItem from="1719335530605" duration="128000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,5 @@
 $(function (){
     let ajaxCall = '';
-
     $('form').on('submit', function (e){
         e.preventDefault();
         let email = $('#email_input').val();

@@ -27,7 +27,7 @@ class User
         }
         $conn = new DbConnect();
         $conn = $conn->connect();
-        if (!$conn) {
+        if (is_string($conn)) {
             return $conn;
         }
         $stmt = $conn->prepare("SELECT * FROM users WHERE emailUser = :emailUser");
