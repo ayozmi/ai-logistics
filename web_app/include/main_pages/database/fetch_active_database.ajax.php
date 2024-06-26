@@ -12,7 +12,7 @@ try {
         throw new Exception("Could not connect to database!", 500);
     }
     $stmt = $conn->prepare("SELECT `host_database`, `port_database`, `name_database`, `user_database`
-                                FROM `logimo`.`database` WHERE active_database = 1;");
+                                FROM `logimoapp`.`database` WHERE active_database = 1;");
     $stmt->execute();
     // Fetch the result
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -24,13 +24,12 @@ try {
         $json["database"] = $result['name_database'];
         $json["port"] = $result['port_database'];
         $json["user"] = $result['user_database'];
-        // Output the JSON array
-        echo json_encode($json);
     } else {
         $json = [];
-        echo json_encode($json);
     }
 } catch (Exception $exception) {
     $json["error"] = $exception->getMessage();
     http_response_code(500);
+} finally {
+    echo json_encode($json);
 }

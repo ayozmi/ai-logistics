@@ -1,3 +1,4 @@
+<script src="include/main_pages/database/database_setting.js"></script>
 <div class="page-header">
     <h3 class="page-title">Database</h3>
 </div>
