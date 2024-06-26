@@ -17,16 +17,18 @@ try{
     }
 //    Comment for easier debugging
 //    TODO: Uncomment
-//    if (isset($captchaResponse) && !empty($captchaResponse)) { // Check if Captcha is checked
-//        //Get verify response data
-//        $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . $captchaResponse);
-//        $responseData = json_decode($verifyResponse);
-//        if (!$responseData->success) { // If response is not success
-//            throw new Exception("Robot verification failed, please try again!", 500);
-//        }
-//    } else { // If captcha not checked
-//        throw new Exception("Please check the Captcha checkbox!", 500);
-//    }
+/*
+    if (isset($captchaResponse) && !empty($captchaResponse)) { // Check if Captcha is checked
+        //Get verify response data
+        $verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret . "&response=" . $captchaResponse);
+        $responseData = json_decode($verifyResponse);
+        if (!$responseData->success) { // If response is not success
+            throw new Exception("Robot verification failed, please try again!", 500);
+        }
+    } else { // If captcha not checked
+        throw new Exception("Please check the Captcha checkbox!", 500);
+    }
+	*/
     $user = new User();
     $userData = $user->getUser($email);
     if (!$userData){ // If false user doesn't exist
