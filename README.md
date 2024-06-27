@@ -26,7 +26,7 @@
 
 Welcome to **Logimo**, an advanced AI-driven platform specifically designed for the logistics industry. Logimo leverages cutting-edge machine learning and data engineering techniques to provide predictive analytics for delays and costs, real-time data inquiries through an intelligent chatbot, and automated news monitoring to anticipate operational impacts.
 
-App deployed in EC2 for Demo (Until July 26, 2024): [HERE](http://44.217.19.13 /Logimo/login.php) 
+App deployed in EC2 for Demo (Until July 26, 2024): [HERE](http://44.217.19.13/Logimo/login.php) 
 
 ## Key Features
 
